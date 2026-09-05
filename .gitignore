@@ -1,0 +1,24 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+playwright/.auth/
+artifacts/auth/
+**/storage-state.json
+**/*-storage-state.json
+
+# Generated run output
+artifacts/runs/
+artifacts/smoke/
+
+# Local planning and learning notes
+ROADMAP.md
+docs/learning-checkpoints.md
+HANDOFF.md

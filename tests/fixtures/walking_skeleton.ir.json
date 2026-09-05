@@ -1,0 +1,33 @@
+{
+  "schema_version": "1",
+  "start_url": "http://127.0.0.1:8765",
+  "viewport": {"width": 1280, "height": 720},
+  "actions": [
+    {
+      "kind": "click",
+      "target": {
+        "strategy": "role",
+        "role": "button",
+        "name": "Add to Basket",
+        "scope": {
+          "strategy": "role",
+          "role": "article",
+          "name": "Apple Juice product"
+        }
+      }
+    }
+  ],
+  "oracle": {
+    "kind": "text",
+    "target": {
+      "strategy": "role",
+      "role": "button",
+      "name": "Show the shopping cart"
+    },
+    "expected_value": "1",
+    "match": "contains"
+  },
+  "source_expected_behavior": "Adding Apple Juice should increase the basket count to 1.",
+  "oracle_locked": true
+}
+

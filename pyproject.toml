@@ -1,0 +1,27 @@
+[project]
+name = "repro"
+version = "0.1.0"
+description = "Turn screen-recorded web bugs into deterministic Playwright tests"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2.11,<3",
+  "playwright>=1.55,<2",
+  "typer>=0.17,<1",
+]
+
+[project.scripts]
+repro = "repro.cli:app"
+
+[dependency-groups]
+dev = [
+  "pytest>=8.4,<9",
+  "pytest-playwright>=0.7,<1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
